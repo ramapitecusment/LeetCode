@@ -1,5 +1,7 @@
 package _Top_100_Liked_Questions._14_Longest_Common_Prefix
 
+// https://leetcode.com/problems/longest-common-prefix/
+
 class Solution {
     fun longestCommonPrefix(strs: Array<String>): String? {
         if (strs.isEmpty()) return ""
