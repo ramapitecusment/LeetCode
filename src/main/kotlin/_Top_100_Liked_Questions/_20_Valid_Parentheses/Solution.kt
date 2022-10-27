@@ -1,11 +1,13 @@
 package _Top_100_Liked_Questions._20_Valid_Parentheses
 
+import java.util.*
+
 
 class Solution {
 
-//    private val brackets = hashMapOf(
-//        '(' to ')', '[' to ']', '{' to '}'
-//    )
+    private val brackets = hashMapOf(
+        '(' to ')', '[' to ']', '{' to '}'
+    )
 
 
 //    fun isValid(s: String): Boolean {
@@ -19,15 +21,15 @@ class Solution {
 //        return stack.isEmpty()
 //    }
 
-//    fun isValid(s: String): Boolean {
-//        val stack = Stack<Char>()
-//        s.forEach {
-//            if (brackets.keys.contains(it)) stack.push(it)
-//            else if (brackets[stack.lastOrNull()] == it) stack.pop()
-//            else return false
-//        }
-//        return stack.isEmpty()
-//    }
+    fun isValid(s: String): Boolean {
+        val stack = Stack<Char>()
+        s.forEach {
+            if (brackets.keys.contains(it)) stack.push(it)
+            else if (brackets[stack.lastOrNull()] == it) stack.pop()
+            else return false
+        }
+        return stack.isEmpty()
+    }
 
 //    fun isValid(s: String): Boolean {
 //        val stack = Stack<Char>()
@@ -41,15 +43,15 @@ class Solution {
 //        return stack.isEmpty()
 //    }
 
-    fun isValid(brackets: String): Boolean {
-        var s = brackets
-        while (s.indexOf("{}") != -1 || s.indexOf("[]") != -1 || s.indexOf("()") != -1) {
-            s = s.replace("()", "")
-            s = s.replace("[]", "")
-            s = s.replace("{}", "")
-        }
-        return s.isEmpty()
-    }
+//    fun isValid(brackets: String): Boolean {
+//        var s = brackets
+//        while (s.indexOf("{}") != -1 || s.indexOf("[]") != -1 || s.indexOf("()") != -1) {
+//            s = s.replace("()", "")
+//            s = s.replace("[]", "")
+//            s = s.replace("{}", "")
+//        }
+//        return s.isEmpty()
+//    }
 }
 
 fun main() {
