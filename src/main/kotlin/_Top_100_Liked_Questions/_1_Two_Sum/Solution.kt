@@ -5,9 +5,9 @@ package _Top_100_Liked_Questions._1_Two_Sum
 class Solution {
     fun twoSum(nums: IntArray, target: Int): IntArray {
         val difMap = mutableMapOf<Int, Int>()
-        nums.forEachIndexed { index, i ->
-            val dif = target - i
-            if (difMap[i] != null) return intArrayOf(difMap[i]!!, index)
+        nums.forEachIndexed { index, value ->
+            val dif = target - value
+            if (difMap[value] != null) return intArrayOf(difMap[value]!!, index)
             else difMap[dif] = index
         }
         return intArrayOf()
