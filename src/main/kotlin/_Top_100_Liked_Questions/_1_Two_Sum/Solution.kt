@@ -3,6 +3,7 @@ package _Top_100_Liked_Questions._1_Two_Sum
 // https://leetcode.com/problems/two-sum/
 
 class Solution {
+    
     fun twoSum(nums: IntArray, target: Int): IntArray {
         val difMap = mutableMapOf<Int, Int>()
         nums.forEachIndexed { index, value ->
@@ -12,7 +13,7 @@ class Solution {
         }
         return intArrayOf()
     }
-    
+
 }
 
 fun main() {
