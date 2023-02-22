@@ -5,10 +5,12 @@ package _Top_100_Liked_Questions._2_Add_Two_Numbers
 val first = ListNode(9)
 val first_ = ListNode(9)
 val first__ = ListNode(9)
+//val first__ = ListNode(5)
 
 val second = ListNode(1)
 
 class Solution {
+
     fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
         var summand1 = l1
         var summand2 = l2
@@ -27,6 +29,7 @@ class Solution {
         }
         return resultNode.next
     }
+
 }
 
 fun main() {
