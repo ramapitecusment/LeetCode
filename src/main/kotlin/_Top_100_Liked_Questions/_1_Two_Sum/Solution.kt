@@ -3,13 +3,12 @@ package _Top_100_Liked_Questions._1_Two_Sum
 // https://leetcode.com/problems/two-sum/
 
 class Solution {
-    
+
     fun twoSum(nums: IntArray, target: Int): IntArray {
         val difMap = mutableMapOf<Int, Int>()
         nums.forEachIndexed { index, value ->
-            val dif = target - value
             if (difMap[value] != null) return intArrayOf(difMap[value]!!, index)
-            else difMap[dif] = index
+            else difMap[target - value] = index
         }
         return intArrayOf()
     }
