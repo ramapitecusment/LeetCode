@@ -56,14 +56,14 @@ fun main() {
     val solution9 = Solution().lengthOfLongestSubstring("jbpnbwwd") // 4
     val solution10 = Solution().lengthOfLongestSubstring("hkcpmprxxxqw") // 5
 
-    println(solution1)
-    println(solution2)
-    println(solution3)
-    println(solution4)
-    println(solution5)
-    println(solution6)
-    println(solution7)
-    println(solution8)
-    println(solution9)
-    println(solution10)
+    println(solution1 == 3)
+    println(solution2 == 1)
+    println(solution3 == 3)
+    println(solution4 == 1)
+    println(solution5 == 2)
+    println(solution6 == 2)
+    println(solution7 == 3)
+    println(solution8 == 2)
+    println(solution9 == 4)
+    println(solution10 == 5)
 }
