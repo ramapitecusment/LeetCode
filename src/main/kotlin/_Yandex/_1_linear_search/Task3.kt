@@ -8,6 +8,7 @@ package _Yandex._1_linear_search
 private fun solution(nums: IntArray): Int {
     var result = 0
     nums.forEachIndexed { index, value ->
+        // Лишний раз не присваивать объект (так как он может быть тяжелый). Лучше сохранить индекс объекта
         if (value > nums[result]) result = index
     }
     return nums[result]
