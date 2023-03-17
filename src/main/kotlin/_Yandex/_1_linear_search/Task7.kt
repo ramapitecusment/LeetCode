@@ -18,7 +18,7 @@ fun solution(island: Array<Int>): Int {
     var result = 0
     var maxPos = 0
     island.forEachIndexed { index, value ->
-        if (value > maxPos) maxPos = index
+        if (value > island[maxPos]) maxPos = index
     }
     var curMax = 0
     for (i in 0 until maxPos) {
@@ -37,8 +37,12 @@ fun main() {
     val solution1 = solution(arrayOf(3, 1, 4, 3, 5, 1, 1, 3, 1)) // 7
     val solution2 = solution(arrayOf(3, 2, 5, 2, 2, 5, 2, 2, 3)) // 9
     val solution3 = solution(arrayOf(3, 2, 5, 2, 2, 5, 2, 2, 3, 3, 2, 3)) // 10
+    val solution4 = solution(arrayOf(3, 1, 2)) // 1
+    val solution5 = solution(arrayOf(4, 3, 2, 1, 2, 3, 4, 5)) // 9
 
     println(solution1)
     println(solution2)
     println(solution3)
+    println(solution4)
+    println(solution5)
 }
