@@ -87,6 +87,7 @@ public class Assert {
      */
     public static void assertEquals(String message, Object expected,
             Object actual) {
+        System.out.println("expected: " + expected.toString() + ". actual: " + actual.toString());
         if (equalsRegardingNull(expected, actual)) {
             return;
         }
