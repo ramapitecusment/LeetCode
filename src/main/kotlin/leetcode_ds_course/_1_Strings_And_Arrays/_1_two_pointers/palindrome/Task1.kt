@@ -11,6 +11,10 @@ Example 1: Return true if a given string is a palindrome, false otherwise.
 A string is a palindrome if it reads the same forwards as backwards.
 That means, after reversing it, it is still the same string. For example: "abcdcba", or "racecar".
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Run in O(n) and Space O(1)
+
 */
 
 class Solution {
@@ -18,7 +22,7 @@ class Solution {
     fun checkIfPalindrome(text: String): Boolean {
         var p1 = 0
         var p2 = text.length - 1
-        while (p2 > p1) {
+        while (p1 < p2) {
             if (text[p1] != text[p2]) return false
             p1++
             p2--
