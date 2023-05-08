@@ -17,7 +17,7 @@ Run in O(n) and Space O(1)
 
 */
 
-class Solution {
+class Palindrome {
 
     fun checkIfPalindrome(text: String): Boolean {
         var p1 = 0
@@ -34,11 +34,11 @@ class Solution {
 }
 
 fun main() {
-    val solution1 = Solution().checkIfPalindrome("abcdcba") // true
-    val solution2 = Solution().checkIfPalindrome("racecar") // true
-    val solution3 = Solution().checkIfPalindrome("abcddcba") // true
-    val solution4 = Solution().checkIfPalindrome("abcdbcba") // false
-    val solution5 = Solution().checkIfPalindrome("aceba") // false
+    val solution1 = Palindrome().checkIfPalindrome("abcdcba") // true
+    val solution2 = Palindrome().checkIfPalindrome("racecar") // true
+    val solution3 = Palindrome().checkIfPalindrome("abcddcba") // true
+    val solution4 = Palindrome().checkIfPalindrome("abcdbcba") // false
+    val solution5 = Palindrome().checkIfPalindrome("aceba") // false
 
     assertEquals(true, solution1)
     assertEquals(true, solution2)

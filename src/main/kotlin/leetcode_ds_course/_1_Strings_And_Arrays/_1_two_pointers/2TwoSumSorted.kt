@@ -18,7 +18,7 @@ Run in O(n) and Space O(1)les.
 
 */
 
-class Solution {
+class TwoSumSorted {
 
     fun checkForTarget(nums: IntArray, target: Int): Boolean {
         var p1 = 0
@@ -37,10 +37,10 @@ class Solution {
 }
 
 fun main() {
-    val solution1 = Solution().checkForTarget(intArrayOf(1, 2, 4, 6, 8, 9, 14, 15), 13)
-    val solution2 = Solution().checkForTarget(intArrayOf(1, 2, 4, 6, 8, 9, 14, 15), 0)
-    val solution3 = Solution().checkForTarget(intArrayOf(1, 2, 4, 6, 8, 9, 14, 15), 16)
-    val solution4 = Solution().checkForTarget(intArrayOf(1, 2, 4, 6, 8, 9, 14, 15), 6)
+    val solution1 = TwoSumSorted().checkForTarget(intArrayOf(1, 2, 4, 6, 8, 9, 14, 15), 13)
+    val solution2 = TwoSumSorted().checkForTarget(intArrayOf(1, 2, 4, 6, 8, 9, 14, 15), 0)
+    val solution3 = TwoSumSorted().checkForTarget(intArrayOf(1, 2, 4, 6, 8, 9, 14, 15), 16)
+    val solution4 = TwoSumSorted().checkForTarget(intArrayOf(1, 2, 4, 6, 8, 9, 14, 15), 6)
 
     assertEquals(true, solution1)
     assertEquals(false, solution2)
