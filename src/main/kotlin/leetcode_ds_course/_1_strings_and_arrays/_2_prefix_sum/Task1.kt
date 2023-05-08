@@ -1,2 +1,0 @@
-package leetcode_ds_course._1_strings_and_arrays._2_prefix_sum
-
