@@ -1,8 +1,21 @@
 package leetcode_ds_course._1_Strings_And_Arrays._1_two_pointers
 
 import Assert.Assert.assertEquals
-import java.util.*
 import kotlin.math.abs
+
+/*
+
+https://leetcode.com/explore/interview/card/leetcodes-interview-crash-course-data-structures-and-algorithms/703/arraystrings/4689/
+
+Given an integer array nums sorted in non-decreasing order,
+return an array of the squares of each number sorted in non-decreasing order.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Because array is already sorted, therefore we do not need to sort it again.
+Run in O(n) and Space O(1)
+
+*/
 
 //class SortedArraysSquare {
 //
