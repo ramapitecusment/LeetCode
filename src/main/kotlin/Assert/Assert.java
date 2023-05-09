@@ -530,6 +530,7 @@ public class Assert {
      */
     public static void assertEquals(String message, double expected,
             double actual, double delta) {
+        System.out.println("expected: " + expected + ". actual: " + actual);
         if (doubleIsDifferent(expected, actual, delta)) {
             failNotEquals(message, Double.valueOf(expected), Double.valueOf(actual));
         }
