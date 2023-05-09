@@ -17,7 +17,7 @@ Run in O(n) and Space O(1)
 */
 
 class LongestSubArraySum {
-    
+
     fun findLength(nums: IntArray, k: Int): Int {
         var sum = 0
         var p1 = 0
