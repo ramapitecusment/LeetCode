@@ -13,22 +13,39 @@ section has a sum greater than or equal to the sum of the second section. The se
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Run in O(n+m) and Space O(n)
+Run in O(n+m) and Space O(n) or O(1)
 
 */
 
 class NumberWaysSplitArray {
 
+//    fun waysToSplitArray(nums: IntArray): Int {
+//        val sumArray = IntArray(nums.size)
+//        var ans = 0
+//        sumArray[0] = nums[0]
+//        for (i in 1 until nums.size) {
+//            sumArray[i] = nums[i] + sumArray[i - 1]
+//        }
+//
+//        for (i in 0 until sumArray.size - 1) {
+//            if (sumArray[i] >= sumArray[sumArray.size - 1] - sumArray[i]) ans++
+//        }
+//
+//        return ans
+//    }
+
     fun waysToSplitArray(nums: IntArray): Int {
-        val sumArray = IntArray(nums.size)
         var ans = 0
-        sumArray[0] = nums[0]
-        for (i in 1 until nums.size) {
-            sumArray[i] = nums[i] + sumArray[i - 1]
+        var total = 0
+        var leftPrefix = 0
+
+        for (i in nums.indices) {
+            total += nums[i]
         }
 
-        for (i in 0 until sumArray.size -1) {
-            if (sumArray[i] >= sumArray[sumArray.size - 1] - sumArray[i]) ans++
+        for (i in 0 until nums.size - 1) {
+            leftPrefix += nums[i]
+            if (leftPrefix >= total - leftPrefix) ans++
         }
 
         return ans
