@@ -14,7 +14,11 @@ Return s after reversing it.
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
+Complexity Analysis
 
+Time Complexity: O(N), where N is the length of S.
+
+Space Complexity: O(N).
 
 */
 
