@@ -102,6 +102,7 @@ class ReverseWordsInString3 {
         var p1 = 0
         var p2 = 0
         var temp: Char
+        
         for (i in s.indices) {
 
             if (s[i] == ' ' || i == s.length - 1) {
