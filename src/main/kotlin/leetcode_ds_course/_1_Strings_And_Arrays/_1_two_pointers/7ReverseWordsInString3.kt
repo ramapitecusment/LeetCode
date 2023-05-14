@@ -47,12 +47,12 @@ class ReverseWordsInString3 {
 
     /*
 
-    Time Complexity: O(N)\mathcal{O}(N)O(N) Every character in the string is traversed twice.
+    Time Complexity: O(N). Every character in the string is traversed twice.
     First, to find the end of the current word, and second to reverse the word and append it to the result.
-    Thus the time complexity is, O(N+N)=O(N)\mathcal{O}(N + N) = \mathcal{O}(N)O(N+N)=O(N).
+    Thus the time complexity is, O(N+N)=O(N).
 
-    Space Complexity: O(1)\mathcal{O}(1)O(1) We use constant extra space to track the last space index.
-    You could also argue that we are using O(n)O(n)O(n) space to build the output string
+    Space Complexity: O(1). We use constant extra space to track the last space index.
+    You could also argue that we are using O(n) space to build the output string
     (we normally don't count the output as part of the space complexity, but in this case we are temporarily using some space to build it).
 
     */
@@ -87,12 +87,12 @@ class ReverseWordsInString3 {
 
     Let NNN be the length of string s.
 
-    Time Complexity: O(N)\mathcal{O}(N)O(N) The outer loop iterates over N\text{N}N characters to find the start and end index of every word.
-    The algorithm to reverse the word also iterates N\text{N}N times to perform N/2\text{N/2}N/2 swaps.
+    Time Complexity: O(N) The outer loop iterates over N characters to find the start and end index of every word.
+    The algorithm to reverse the word also iterates N times to perform N/2 swaps.
     Thus, the time complexity is O(N+N)=O(N)\mathcal{O}(N + N) = {O}(N)O(N+N)=O(N).
 
-    Space Complexity: O(1)\mathcal{O}(1)O(1) We use constant extra space to track the last space index.
-    You could also argue that we are using O(n)O(n)O(n) space to build the output string
+    Space Complexity: O(1) We use constant extra space to track the last space index.
+    You could also argue that we are using O(n) space to build the output string
     (we normally don't count the output as part of the space complexity, but in this case we are temporarily using some space to build it).
 
     */
@@ -103,13 +103,13 @@ class ReverseWordsInString3 {
         var p2 = 0
         var temp: Char
         for (i in s.indices) {
+
             if (s[i] == ' ' || i == s.length - 1) {
                 p1 = lastSpaceIndex + 1
-                if (s[i] == ' ') {
-                    p2 = i - 1
-                } else if (i == s.length - 1) {
-                    p2 = i
-                }
+
+                if (s[i] == ' ') p2 = i - 1
+                else if (i == s.length - 1) p2 = i
+
                 while (p1 < p2) {
                     temp = ans[p1]
                     ans[p1] = ans[p2]
@@ -117,9 +117,9 @@ class ReverseWordsInString3 {
                     p1++
                     p2--
                 }
-                if (s[i] == ' ') {
-                    lastSpaceIndex = i
-                }
+
+                if (s[i] == ' ') lastSpaceIndex = i
+
             }
         }
 
