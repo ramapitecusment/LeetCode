@@ -26,6 +26,21 @@ Space Complexity: O(1).
 */
 
 class FindPivotIndex {
+
+//    fun pivotIndex(nums: IntArray): Int {
+//        val array = IntArray(nums.size)
+//        array[0] = nums[0]
+//        for (i in 1 until nums.size) {
+//            array[i] = array[i - 1] + nums[i]
+//        }
+//
+//        for (i in nums.indices) {
+//            if (array[i] - nums[i] == array.last() - array[i]) return i
+//        }
+//
+//        return -1
+//    }
+
     fun pivotIndex(nums: IntArray): Int {
         var total = 0
         var curr = 0
@@ -41,6 +56,7 @@ class FindPivotIndex {
 
         return -1
     }
+
 }
 
 fun main() {
