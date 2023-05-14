@@ -22,8 +22,8 @@ class ReverseString {
             val temp = s[start]
             s[start] = s[end]
             s[end] = temp
-            start+=1
-            end-=1
+            start += 1
+            end -= 1
         }
     }
 }
