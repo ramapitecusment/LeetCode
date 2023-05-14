@@ -20,13 +20,13 @@ class LongestSubArraySum {
 
     fun findLength(nums: IntArray, k: Int): Int {
         var sum = 0
-        var p1 = 0
+        var left = 0
         var result = 0
 
-        for (i in nums.indices) {
-            sum += nums[i]
-            while (sum > k && p1 <= i) sum -= nums[p1++]
-            result = max(result, i - p1 + 1)
+        for (right in nums.indices) {
+            sum += nums[right]
+            while (sum > k && left <= right) sum -= nums[left++]
+            result = max(result, right - left + 1)
         }
 
         return result
