@@ -30,6 +30,7 @@ class MinimumSizeSubarraySum {
             sum += nums[p2]
             if (sum >= target) {
                 while (sum >= target) {
+//                    minSize = min(minSize, p2 - p1 + 1)
                     sum -= nums[p1++]
                 }
                 minSize = min(minSize, p2 - p1 + 2)
