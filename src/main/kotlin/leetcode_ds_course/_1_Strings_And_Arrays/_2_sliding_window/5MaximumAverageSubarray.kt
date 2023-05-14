@@ -21,8 +21,8 @@ Run in O(n) and Space O(1)
 class MaximumAverageSubarray {
 
     fun findMaxAverage(nums: IntArray, k: Int): Double {
-        var ans: Double
-        var curr = 0.0
+        var ans: Int
+        var curr = 0
         for (i in 0 until k) {
             curr += nums[i]
         }
@@ -33,7 +33,7 @@ class MaximumAverageSubarray {
             ans = max(ans, curr)
         }
 
-        return ans / k
+        return (ans / k).toDouble()
     }
 
 }
