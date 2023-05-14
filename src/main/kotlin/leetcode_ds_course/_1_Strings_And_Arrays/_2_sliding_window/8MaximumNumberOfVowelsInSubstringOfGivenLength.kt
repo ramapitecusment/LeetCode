@@ -57,19 +57,19 @@ class MaximumNumberOfVowelsInSubstringOfGivenLength {
 
     fun maxVowels(s: String, k: Int): Int {
         var curr = 0
-        for(i in 0 until k) {
-            if(s[i].isVowel()) curr++
+        for (i in 0 until k) {
+            if (s[i].isVowel()) curr++
         }
         var ans = curr
-        for(i in k until s.length) {
-            if(s[i - k].isVowel()) curr--
-            if(s[i].isVowel()) curr++
+        for (i in k until s.length) {
+            if (s[i - k].isVowel()) curr--
+            if (s[i].isVowel()) curr++
             ans = max(ans, curr)
         }
         return ans
     }
 
-    fun Char.isVowel() = this == 'a' || this == 'e' || this == 'i' || this == 'o' || this == 'u'
+    private fun Char.isVowel() = this == 'a' || this == 'e' || this == 'i' || this == 'o' || this == 'u'
 
 }
 

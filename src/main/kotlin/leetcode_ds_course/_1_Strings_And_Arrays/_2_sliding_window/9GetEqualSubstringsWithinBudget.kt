@@ -30,6 +30,7 @@ class GetEqualSubstringsWithinBudge {
         var ans = 0
         var left = 0
         var curr = 0
+
         for (right in s.indices) {
             curr += abs(s[right] - t[right])
 
@@ -40,13 +41,13 @@ class GetEqualSubstringsWithinBudge {
 
             ans = max(ans, right - left + 1)
         }
-        
+
         return ans
     }
 
     private fun max(a: Int, b: Int) = if (a >= b) a else b
 
-    private fun abs(a: Int) =  if (a < 0) -a else a
+    private fun abs(a: Int) = if (a < 0) -a else a
 
 }
 
