@@ -25,7 +25,9 @@ class LongestSubArraySum {
 
         for (right in nums.indices) {
             sum += nums[right]
-            while (sum > k && left <= right) sum -= nums[left++]
+            while (sum > k && left <= right) {
+                sum -= nums[left++]
+            }
             result = max(result, right - left + 1)
         }
 
