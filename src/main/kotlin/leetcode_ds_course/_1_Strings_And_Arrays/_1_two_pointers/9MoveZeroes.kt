@@ -6,7 +6,7 @@ import Assert.Assert.assertEquals
 
 https://leetcode.com/problems/move-zeroes/
 
-iven an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
 
 Note that you must do this in-place without making a copy of the array.
 
@@ -20,19 +20,30 @@ Space Complexity: O(1).
 */
 
 class MoveZeroes {
+
     fun moveZeroes(nums: IntArray) {
-        var p1 = 0
-        var p2 = 0
-        while (p2 < nums.size && p1 < nums.size) {
-            if (nums[p1] == 0) {
-                while (p2 < nums.size - 1 && nums[p2] == 0) p2++
-                nums[p1] = nums[p2]
-                nums[p2] = 0
-            }
-            p1++
-            p2++
+        var lastNonZeroIndex = 0
+        for (i in nums.indices) {
+            if (nums[i] != 0) nums[lastNonZeroIndex++] = nums[i]
+        }
+
+        for (i in lastNonZeroIndex until nums.size) {
+            nums[i] = 0
         }
     }
+
+//    fun moveZeroes(nums: IntArray) {
+//        var lastNonZeroIndex = 0
+//        var curr: Int
+//        for (i in nums.indices) {
+//            if (nums[i] != 0) {
+//                curr = nums[lastNonZeroIndex]
+//                nums[lastNonZeroIndex++] = nums[i]
+//                nums[i] = curr
+//            }
+//        }
+//    }
+
 }
 
 fun main() {
