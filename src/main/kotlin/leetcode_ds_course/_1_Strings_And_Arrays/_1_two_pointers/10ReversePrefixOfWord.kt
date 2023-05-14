@@ -48,6 +48,7 @@ class ReversePrefixOfWord {
 
     fun reversePrefix(word: String, ch: Char): String {
         var firstOccurrence = -1
+
         for (i in word.indices) {
             if (word[i] == ch) {
                 firstOccurrence = i
@@ -55,16 +56,17 @@ class ReversePrefixOfWord {
             }
         }
 
-        if (firstOccurrence == -1) return word
         var p1 = 0
         var p2 = firstOccurrence
         val array = word.toCharArray()
+
         while (p1 < p2) {
             array[p1] = word[p2]
             array[p2] = word[p1]
             p1++
             p2--
         }
+
         return String(array)
     }
 }
