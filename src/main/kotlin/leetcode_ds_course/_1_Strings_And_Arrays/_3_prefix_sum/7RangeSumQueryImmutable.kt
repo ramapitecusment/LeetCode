@@ -24,17 +24,18 @@ Space Complexity: O(N).
 
 */
 
-class NumArray(nums: IntArray) {
+class NumArray(private val nums: IntArray) {
 
-    private val sumArray = IntArray(nums.size + 1)
+    private val sumArray = IntArray(nums.size)
 
     init {
-        for (i in nums.indices) {
-            sumArray[i + 1] = sumArray[i] + nums[i]
+        sumArray[0] = nums[0]
+        for (i in 1 until nums.size) {
+            sumArray[i] = sumArray[i - 1] + nums[i]
         }
     }
 
-    fun sumRange(left: Int, right: Int) = sumArray[right + 1] - sumArray[left]
+    fun sumRange(left: Int, right: Int) = sumArray[right] - sumArray[left] + nums[left]
 
 }
 
@@ -44,9 +45,11 @@ fun main() {
     val solution2 = numArray.sumRange(2, 5)
     val solution3 = numArray.sumRange(2, 4)
     val solution4 = numArray.sumRange(0, 5)
+    val solution5 = numArray.sumRange(5, 5)
 
     assertEquals(1, solution1)
     assertEquals(-1, solution2)
     assertEquals(0, solution3)
     assertEquals(-3, solution4)
+    assertEquals(-1, solution5)
 }
