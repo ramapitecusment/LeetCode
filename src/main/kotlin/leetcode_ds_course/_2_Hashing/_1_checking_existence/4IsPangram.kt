@@ -51,7 +51,9 @@ class IsPangram {
 
     fun checkIfPangram(sentence: String): Boolean {
         val englishAlphabetSet = mutableSetOf<Char>()
-        sentence.forEach(englishAlphabetSet::add)
+        sentence.forEach {
+            englishAlphabetSet.add(it)
+        }
         return englishAlphabetSet.size == 26
     }
 
