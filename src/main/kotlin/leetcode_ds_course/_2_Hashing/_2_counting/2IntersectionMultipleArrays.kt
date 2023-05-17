@@ -1,8 +1,6 @@
 package leetcode_ds_course._2_hashing._2_counting
 
 import Assert.Assert.assertEquals
-import java.util.*
-
 
 /*
 
